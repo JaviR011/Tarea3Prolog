@@ -1,0 +1,71 @@
+TERCERA TAREA - PROGRAMACION LOGICA
+INSTRUCCIONES PARA SWI-PROLOG
+
+1. Extrae el ZIP y abre una terminal dentro de la carpeta Tarea3_Prolog.
+2. Inicia SWI-Prolog con el comando: swipl
+3. Copia las consultas de abajo, una por una, incluyendo el punto final.
+4. Para cambiar de ejercicio, puedes salir con halt. y volver a entrar,
+   o cargar directamente el siguiente archivo.
+5. Si aparece false. en una consulta de pertenencia, significa que el
+   elemento no existe en el arbol. Si aparecen mas soluciones, pulsa ;
+   para continuar o Enter para terminar.
+
+========== EJERCICIO 1: ARBOLES ==========
+['Ejercicio1_Arboles.pl'].
+% Arbol de ejemplo: raiz 5, hijos 3 y 8; 3 tiene hijos 1 y 4.
+x_pert_arb(4, arb(arb(arb(nil,1,nil),3,arb(nil,4,nil)),5,arb(nil,8,nil))).
+% Esperado: true.
+x_pert_arb(9, arb(arb(nil,3,nil),5,arb(nil,8,nil))).
+% Esperado: false.
+nods_arb(arb(arb(arb(nil,1,nil),3,arb(nil,4,nil)),5,arb(nil,8,nil)), N).
+% Esperado: N = 5.
+nods_arb(nil, N).
+% Esperado: N = 0.
+
+========== EJERCICIO 2: TRIANGULOS ==========
+['Ejercicio2_Triangulos.pl'].
+triangulo(9, 10, 9).
+% Esperado: Triángulo isósceles.
+triangulo(10, 10, 10).
+% Esperado: Triángulo equilátero.
+triangulo(10, 7, 15).
+% Esperado: Triángulo escaleno.
+triangulo(10, 4, 15).
+% Esperado: No es posible formar un triángulo.
+
+========== EJERCICIO 3: LISTAS ==========
+['Ejercicio3_Listas.pl'].
+cuenta([a,b,a,c,b,d], N).
+% Esperado: N = 4.
+'Cuenta'([1,2,1,3,2], N).
+% Esperado: N = 3.
+filtra([a,b,a,c,b,d], Ys).
+% Esperado: Ys = [a,b,c,d].
+filtra([1,1,2,3,2,4], Ys).
+% Esperado: Ys = [1,2,3,4].
+
+========== EJERCICIO 4: MATRICES ==========
+['Ejercicio4_Matrices.pl'].
+sumamatriz([[2,3],[4,5]], [[4,5],[6,7]], S).
+% Esperado: S = [[6,8],[10,12]].
+sumamatriz([[1,2,3]], [[4,5,6]], S).
+% Esperado: S = [[5,7,9]].
+
+========== EJERCICIO 5: ACKERMANN ==========
+['Ejercicio5_Ackermann.pl'].
+ackermann(1, 2, X).
+% Esperado: X = 4.
+ackermann(2, 2, X).
+% Esperado: X = 7.
+ackermann(3, 2, X).
+% Esperado: X = 29.
+
+========== SALIR ==========
+halt.
+
+========== OPCION SIN ENTRAR AL INTERPRETE ==========
+Desde la terminal del sistema (NO desde ?-), ejecuta:
+swipl -q -s Ejercicio5_Ackermann.pl -g "ackermann(1,2,X),writeln(X)" -t halt
+% Imprime: 4
+
+NOTA: Cada ejercicio es independiente y no requiere librerias externas.

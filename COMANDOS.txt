@@ -1,12 +1,11 @@
 TERCERA TAREA - PROGRAMACION LOGICA
 INSTRUCCIONES PARA SWI-PROLOG
 
-1. Extrae el ZIP y abre una terminal dentro de la carpeta Tarea3_Prolog.
-2. Inicia SWI-Prolog con el comando: swipl
-3. Copia las consultas de abajo, una por una, incluyendo el punto final.
-4. Para cambiar de ejercicio, puedes salir con halt. y volver a entrar,
+1. Inicia SWI-Prolog con el comando: swipl
+2. Copia las consultas de abajo, una por una, incluyendo el punto final.
+3. Para cambiar de ejercicio, puedes salir con halt. y volver a entrar,
    o cargar directamente el siguiente archivo.
-5. Si aparece false. en una consulta de pertenencia, significa que el
+4. Si aparece false. en una consulta de pertenencia, significa que el
    elemento no existe en el arbol. Si aparecen mas soluciones, pulsa ;
    para continuar o Enter para terminar.
 
